@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Accordion from '../packages/react/accordion/src';
+import Accordion from '../uikit/accordion';
 
 const Home: NextPage = () => {
   return (
