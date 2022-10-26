@@ -1,3 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+pre[class*='language-'] {
+  box-sizing: border-box;
+  border-radius: 0;
+  overflow: auto;
+  font-size: 12px;
+  line-height: 21px;
+  white-space: pre;
+  position: relative;
+  background-color: #fbfaff;
+  color: #5746af;
+  box-shadow: none;
+}
+
+pre[class*='language-'] > code {
+  display: block;
+}
+
+.token.parameter {
+  color: #5746af;
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.function {
+  color: #0081f1;
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.number,
+.token.unit,
+.token.color,
+.token.spread {
+  color: #cd1d8d;
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.operator,
+.token.pseudo-class,
+.token.important {
+  color: #006adc;
+}
+
+.token.punctuation,
+.token.module,
+.token.property {
+  color: #006adc;
+}
+
+.token.comment {
+  color: #908e96;
+}
+
+.token.atapply .token:not(.rule):not(.important) {
+  color: inherit;
+}
+
+.language-shell .token:not(.comment) {
+  color: inherit;
+}
+
+.language-css .token.function {
+  color: inherit;
+}
+
+.token.deleted:not(.prefix),
+.token.inserted:not(.prefix) {
+  display: block;
+}
+
+.token.deleted.prefix,
+.token.inserted.prefix {
+  user-select: none;
+}

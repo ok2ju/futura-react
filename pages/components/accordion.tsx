@@ -3,8 +3,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import DocTitle from '../../components/DocTitle';
 import DocSection from '../../components/DocSection';
-import Accordion from '../../uikit/accordion';
 import ExampleArea from '../../components/ExampleArea';
+import DocCodeBlock from '../../components/DocCodeBlock';
+import AccordionExample from '../../uikit/accordion/story/example';
+import { code } from '../../uikit/accordion/story/code';
 
 const AccordionDoc: NextPage = () => {
   return (
@@ -19,9 +21,9 @@ const AccordionDoc: NextPage = () => {
           title="Accordion"
           description="A vertically stacked set of interactive headings that each reveal an associated section of content."
         />
-        <ExampleArea>
+        <ExampleArea code={code}>
           <div className="w-[500px]">
-            <Accordion />
+            <AccordionExample />
           </div>
         </ExampleArea>
         <DocSection
@@ -29,6 +31,7 @@ const AccordionDoc: NextPage = () => {
           title="Installation"
           description="Install the component from your command line."
         />
+        <DocCodeBlock code={`npm install futura-react`} language="bash" />
       </div>
     </Fragment>
   );

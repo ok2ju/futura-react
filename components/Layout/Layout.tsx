@@ -55,7 +55,7 @@ const Layout = ({ children }: LayoutProps) => {
             <Link href="/components/accordion">
               <a className="text-sm font-light py-2">Accordion</a>
             </Link>
-            <Link href="/">
+            <Link href="/components/button">
               <a className="text-sm font-light py-2">Button</a>
             </Link>
           </div>
