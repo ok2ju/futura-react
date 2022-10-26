@@ -14,11 +14,13 @@ const items: AccordionItem[] = [
   {
     header:
       'Each primitive can be installed individually so you we adopt them incrementally?',
-    content: 'Yes!',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     header: 'Is it accessible?',
-    content: 'Yes!',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
 

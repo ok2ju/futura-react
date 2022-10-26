@@ -31,6 +31,7 @@ interface ButtonProps {
   title: string;
   size?: SIZE;
   type?: TYPE;
+  disabled?: boolean;
   onClick?: (event: SyntheticEvent) => void;
 }
 
@@ -38,11 +39,13 @@ export const Button = ({
   title,
   size = SIZE.default,
   type = TYPE.primary,
+  disabled,
   onClick,
 }: ButtonProps) => {
   return (
     <button
-      className={`rounded-lg ${sizes[size]} ${types[type]}`}
+      disabled={disabled}
+      className={`rounded-lg disabled:text-gray-500 disabled:bg-gray-300 disabled:cursor-not-allowed ${sizes[size]} ${types[type]}`}
       onClick={onClick}
     >
       {title}

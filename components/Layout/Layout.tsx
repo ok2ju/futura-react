@@ -24,12 +24,12 @@ const Layout = ({ children }: LayoutProps) => {
           </Link>
           <nav className="flex space-x-8 ml-4">
             <Link href="/">
-              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a className="text-base text-gray-500 hover:text-gray-900">
                 Home
               </a>
             </Link>
-            <Link href="/">
-              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <Link href="/about">
+              <a className="text-base text-gray-500 hover:text-gray-900">
                 About
               </a>
             </Link>

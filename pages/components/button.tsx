@@ -25,6 +25,9 @@ const ButtonDoc: NextPage = () => {
             <Button title="Button" type={TYPE.secondary} size={SIZE.small} />
           </div>
           <div className="mx-1">
+            <Button title="Button" disabled />
+          </div>
+          <div className="mx-1">
             <Button title="Button" size={SIZE.default} />
           </div>
           <div className="mx-1">

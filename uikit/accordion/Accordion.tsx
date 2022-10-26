@@ -39,7 +39,7 @@ export const Header = forwardRef<
       {...props}
     >
       {children}
-      <ChevronDownIcon aria-hidden />
+      <ChevronDownIcon aria-hidden className="shrink-0" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
