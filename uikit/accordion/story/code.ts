@@ -26,3 +26,14 @@ export const AccordionDemo = () => (
 
 export default AccordionDemo;
 `;
+
+export const anatomy = `import * as Accordion from '@futura-react/accordion';
+
+() => (
+  <Accordion.Root>
+    <Accordion.Item>
+      <Accordion.Header>...</Accordion.Header>
+      <AccordionContent>...</AccordionContent>
+    </Accordion.Item>
+  </Accordion.Root>
+);`;

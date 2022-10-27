@@ -2,10 +2,13 @@ import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import DocTitle from '../../components/DocTitle';
-import DocSection from '../../components/DocSection';
+import { Heading, Text } from '../../components/Typography';
 import ExampleArea from '../../components/ExampleArea';
 import DocCodeBlock from '../../components/DocCodeBlock';
 import { Button, SIZE, TYPE } from '../../uikit/button';
+import PropsTable from '../../components/PropsTable';
+import { anatomy } from '../../uikit/button/story/code';
+import { buttonProps } from '../../uikit/button/story/propsInfo';
 
 const ButtonDoc: NextPage = () => {
   return (
@@ -37,12 +40,13 @@ const ButtonDoc: NextPage = () => {
             <Button title="Button" type={TYPE.danger} size={SIZE.big} />
           </div>
         </ExampleArea>
-        <DocSection
-          anchor="install"
-          title="Installation"
-          description="Install the component from your command line."
-        />
-        <DocCodeBlock code={`npm install futura-react`} language="bash" />
+
+        <Heading anchor="anatomy">Anatomy</Heading>
+        <Text>Import all parts and piece them together.</Text>
+        <DocCodeBlock code={anatomy} language="jsx" />
+
+        <Heading anchor="api">API Reference</Heading>
+        <PropsTable data={buttonProps} />
       </div>
     </Fragment>
   );

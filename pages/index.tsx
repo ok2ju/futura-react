@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import DocTitle from '../components/DocTitle';
-import Text from '../components/Text';
+import { Text } from '../components/Typography';
 
 const Home: NextPage = () => {
   return (

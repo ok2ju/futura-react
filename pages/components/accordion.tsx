@@ -2,12 +2,18 @@ import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import DocTitle from '../../components/DocTitle';
-import DocSection from '../../components/DocSection';
+import { Heading, HEADING_SIZES, Text } from '../../components/Typography';
 import ExampleArea from '../../components/ExampleArea';
 import DocCodeBlock from '../../components/DocCodeBlock';
 import AccordionExample from '../../uikit/accordion/story/example';
-import Text from '../../components/Text';
-import { code } from '../../uikit/accordion/story/code';
+import PropsTable from '../../components/PropsTable';
+import { code, anatomy } from '../../uikit/accordion/story/code';
+import {
+  rootProps,
+  itemProps,
+  headerProps,
+  contentProps,
+} from '../../uikit/accordion/story/propsInfo';
 
 const AccordionDoc: NextPage = () => {
   return (
@@ -27,21 +33,36 @@ const AccordionDoc: NextPage = () => {
             <AccordionExample />
           </div>
         </ExampleArea>
-        <DocSection
-          anchor="install"
-          title="Installation"
-          description="Install the component from your command line."
-        />
-        <DocCodeBlock code={`npm install futura-react`} language="bash" />
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Text>
+
+        <Heading anchor="anatomy">Anatomy</Heading>
+        <Text>Import all parts and piece them together.</Text>
+        <DocCodeBlock code={anatomy} language="jsx" />
+
+        <Heading anchor="api">API Reference</Heading>
+
+        <Heading anchor="root" size={HEADING_SIZES.md}>
+          Root
+        </Heading>
+        <Text>Contains all the parts of an accordion.</Text>
+        <PropsTable data={rootProps} />
+
+        <Heading anchor="item" size={HEADING_SIZES.md}>
+          Item
+        </Heading>
+        <Text>Contains all the parts of a collapsible section.</Text>
+        <PropsTable data={itemProps} />
+
+        <Heading anchor="header" size={HEADING_SIZES.md}>
+          Header
+        </Heading>
+        <Text>Wraps an `Accordion.Trigger`.</Text>
+        <PropsTable data={headerProps} />
+
+        <Heading anchor="content" size={HEADING_SIZES.md}>
+          Content
+        </Heading>
+        <Text>Contains the collapsible content for an item.</Text>
+        <PropsTable data={contentProps} />
       </div>
     </Fragment>
   );
