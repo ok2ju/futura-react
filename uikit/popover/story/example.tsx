@@ -1,7 +1,7 @@
 import { MixerHorizontalIcon, Cross1Icon } from '@radix-ui/react-icons';
 import * as Popover from '..';
 
-const PopoverExample = () => {
+const PopoverExample = ({ boundary }: { boundary: Element | null }) => {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
@@ -13,7 +13,11 @@ const PopoverExample = () => {
         </button>
       </Popover.Trigger>
 
-      <Popover.Content align="center" sideOffset={4}>
+      <Popover.Content
+        align="center"
+        sideOffset={4}
+        collisionBoundary={boundary}
+      >
         <Popover.Arrow className="fill-current text-white" />
         <h3>Popover header</h3>
         <div>Content here</div>

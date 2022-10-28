@@ -3,6 +3,8 @@ import cx from 'classnames';
 
 export const Root = Popover.Root;
 export const Trigger = Popover.Trigger;
+export const Anchor = Popover.Anchor;
+export const Portal = Popover.Portal;
 
 export const Arrow = ({ children, ...other }: Popover.PopoverArrowProps) => (
   <Popover.Arrow {...other}>{children}</Popover.Arrow>

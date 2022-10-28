@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import DocTitle from '../../components/DocTitle';
@@ -6,6 +6,8 @@ import ExampleArea from '../../components/ExampleArea';
 import PopoverExample from '../../uikit/popover/story/example';
 
 const PopoverDoc: NextPage = () => {
+  const [boundaryRef, setBoundaryRef] = useState<HTMLDivElement | null>(null);
+
   return (
     <Fragment>
       <Head>
@@ -19,8 +21,13 @@ const PopoverDoc: NextPage = () => {
           description="Displays rich content in a portal, triggered by a button."
         />
         <ExampleArea>
-          <div className="w-[500px] flex items-center justify-center">
-            <PopoverExample />
+          <div
+            ref={(node) => {
+              setBoundaryRef(node);
+            }}
+            className="w-[500px] flex items-center justify-center"
+          >
+            <PopoverExample boundary={boundaryRef} />
           </div>
         </ExampleArea>
       </div>
