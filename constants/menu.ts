@@ -53,6 +53,10 @@ export const menu: Array<MenuSection> = [
         title: 'Table',
         path: '/components/table',
       },
+      {
+        title: 'Popover',
+        path: '/components/popover',
+      },
     ],
   },
 ];
